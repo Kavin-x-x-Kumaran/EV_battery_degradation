@@ -1,0 +1,41 @@
+# Local data and generated artifacts
+Vehicle data (1).zip
+sample_extract/
+models/
+
+# Python caches and environments
+__pycache__/
+
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Frontend/build/dependency artifacts
+node_modules/
+dist/
+build/
+.parcel-cache/
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+
+# Assessment related files
+report/
