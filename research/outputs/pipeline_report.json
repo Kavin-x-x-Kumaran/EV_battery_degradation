@@ -1,0 +1,894 @@
+{
+  "data": {
+    "mode": "real",
+    "sources": [
+      "charging_and_discharging_dataset.csv"
+    ],
+    "n_clients": 1,
+    "n_labelled_cycles": 165,
+    "n_test_cycles": 50,
+    "mlp_seed": 0,
+    "split": "chronological, first 70% of each client's cycles for training",
+    "features_per_cycle": [
+      "cc_duration_s",
+      "cv_duration_s",
+      "window_time_s",
+      "window_ah",
+      "charge_start_voltage",
+      "early_discharge_v_drop",
+      "early_discharge_v_mean",
+      "equiv_full_cycles",
+      "cum_ah_throughput"
+    ]
+  },
+  "held_out_test_metrics": {
+    "mlp_digital_twin": {
+      "mae": 0.012,
+      "rmse": 0.0146,
+      "r2": 0.7952
+    },
+    "linear_trend_on_throughput": {
+      "mae": 0.0275,
+      "rmse": 0.0282,
+      "r2": 0.2401
+    },
+    "ridge_all_features": {
+      "mae": 0.008,
+      "rmse": 0.0105,
+      "r2": 0.8945
+    }
+  },
+  "leave_one_cell_out": null,
+  "federated_learning": {
+    "n_rounds": 200,
+    "final_avg_client_loss": 5.831042434734546e-05,
+    "loss_history": [
+      {
+        "round": 1,
+        "avg_client_loss": 0.011820094437928155
+      },
+      {
+        "round": 2,
+        "avg_client_loss": 0.00564860257902048
+      },
+      {
+        "round": 3,
+        "avg_client_loss": 0.0033707726548254224
+      },
+      {
+        "round": 4,
+        "avg_client_loss": 0.002360105685057699
+      },
+      {
+        "round": 5,
+        "avg_client_loss": 0.0018486295428383893
+      },
+      {
+        "round": 6,
+        "avg_client_loss": 0.001556720819137163
+      },
+      {
+        "round": 7,
+        "avg_client_loss": 0.0013704603699728629
+      },
+      {
+        "round": 8,
+        "avg_client_loss": 0.0012391282726934218
+      },
+      {
+        "round": 9,
+        "avg_client_loss": 0.0011385293002334949
+      },
+      {
+        "round": 10,
+        "avg_client_loss": 0.0010564712440858123
+      },
+      {
+        "round": 11,
+        "avg_client_loss": 0.000986511318843483
+      },
+      {
+        "round": 12,
+        "avg_client_loss": 0.0009250822054589888
+      },
+      {
+        "round": 13,
+        "avg_client_loss": 0.0008701057439860498
+      },
+      {
+        "round": 14,
+        "avg_client_loss": 0.0008202995442642475
+      },
+      {
+        "round": 15,
+        "avg_client_loss": 0.0007748201409471536
+      },
+      {
+        "round": 16,
+        "avg_client_loss": 0.0007330748152542063
+      },
+      {
+        "round": 17,
+        "avg_client_loss": 0.0006946200644224642
+      },
+      {
+        "round": 18,
+        "avg_client_loss": 0.0006591055269246306
+      },
+      {
+        "round": 19,
+        "avg_client_loss": 0.000626242214891356
+      },
+      {
+        "round": 20,
+        "avg_client_loss": 0.0005957839884862331
+      },
+      {
+        "round": 21,
+        "avg_client_loss": 0.000567516381469447
+      },
+      {
+        "round": 22,
+        "avg_client_loss": 0.0005412495891289343
+      },
+      {
+        "round": 23,
+        "avg_client_loss": 0.0005168138636382194
+      },
+      {
+        "round": 24,
+        "avg_client_loss": 0.0004940563349197072
+      },
+      {
+        "round": 25,
+        "avg_client_loss": 0.0004728386984188187
+      },
+      {
+        "round": 26,
+        "avg_client_loss": 0.0004530354466765255
+      },
+      {
+        "round": 27,
+        "avg_client_loss": 0.0004345324546203652
+      },
+      {
+        "round": 28,
+        "avg_client_loss": 0.00041722580478376536
+      },
+      {
+        "round": 29,
+        "avg_client_loss": 0.0004010207830371446
+      },
+      {
+        "round": 30,
+        "avg_client_loss": 0.0003858310015627269
+      },
+      {
+        "round": 31,
+        "avg_client_loss": 0.0003715776213967229
+      },
+      {
+        "round": 32,
+        "avg_client_loss": 0.00035818865625930716
+      },
+      {
+        "round": 33,
+        "avg_client_loss": 0.0003455983451140133
+      },
+      {
+        "round": 34,
+        "avg_client_loss": 0.0003337465844191781
+      },
+      {
+        "round": 35,
+        "avg_client_loss": 0.00032257841323002394
+      },
+      {
+        "round": 36,
+        "avg_client_loss": 0.00031204354570532866
+      },
+      {
+        "round": 37,
+        "avg_client_loss": 0.00030209594648377975
+      },
+      {
+        "round": 38,
+        "avg_client_loss": 0.00029269344501407606
+      },
+      {
+        "round": 39,
+        "avg_client_loss": 0.0002837973853657684
+      },
+      {
+        "round": 40,
+        "avg_client_loss": 0.0002753723083850229
+      },
+      {
+        "round": 41,
+        "avg_client_loss": 0.0002673856633328415
+      },
+      {
+        "round": 42,
+        "avg_client_loss": 0.0002598075463775277
+      },
+      {
+        "round": 43,
+        "avg_client_loss": 0.00025261046352246873
+      },
+      {
+        "round": 44,
+        "avg_client_loss": 0.00024576911574252327
+      },
+      {
+        "round": 45,
+        "avg_client_loss": 0.00023926020428163716
+      },
+      {
+        "round": 46,
+        "avg_client_loss": 0.0002330622542326722
+      },
+      {
+        "round": 47,
+        "avg_client_loss": 0.0002271554546789257
+      },
+      {
+        "round": 48,
+        "avg_client_loss": 0.00022152151382551986
+      },
+      {
+        "round": 49,
+        "avg_client_loss": 0.00021614352768807062
+      },
+      {
+        "round": 50,
+        "avg_client_loss": 0.0002110058610356974
+      },
+      {
+        "round": 51,
+        "avg_client_loss": 0.00020609403940571327
+      },
+      {
+        "round": 52,
+        "avg_client_loss": 0.00020139465111835482
+      },
+      {
+        "round": 53,
+        "avg_client_loss": 0.00019689525832202294
+      },
+      {
+        "round": 54,
+        "avg_client_loss": 0.0001925843161929718
+      },
+      {
+        "round": 55,
+        "avg_client_loss": 0.00018845109949876946
+      },
+      {
+        "round": 56,
+        "avg_client_loss": 0.0001844856358124699
+      },
+      {
+        "round": 57,
+        "avg_client_loss": 0.0001806786447349507
+      },
+      {
+        "round": 58,
+        "avg_client_loss": 0.00017702148254665102
+      },
+      {
+        "round": 59,
+        "avg_client_loss": 0.00017350609176764863
+      },
+      {
+        "round": 60,
+        "avg_client_loss": 0.00017012495515699667
+      },
+      {
+        "round": 61,
+        "avg_client_loss": 0.00016687105372914155
+      },
+      {
+        "round": 62,
+        "avg_client_loss": 0.0001637378284074007
+      },
+      {
+        "round": 63,
+        "avg_client_loss": 0.0001607191449724014
+      },
+      {
+        "round": 64,
+        "avg_client_loss": 0.0001578092619974445
+      },
+      {
+        "round": 65,
+        "avg_client_loss": 0.0001550028014933535
+      },
+      {
+        "round": 66,
+        "avg_client_loss": 0.0001522947220128122
+      },
+      {
+        "round": 67,
+        "avg_client_loss": 0.0001496802939888534
+      },
+      {
+        "round": 68,
+        "avg_client_loss": 0.0001471550771042582
+      },
+      {
+        "round": 69,
+        "avg_client_loss": 0.0001447148995084824
+      },
+      {
+        "round": 70,
+        "avg_client_loss": 0.0001423558387165136
+      },
+      {
+        "round": 71,
+        "avg_client_loss": 0.00014007420404008654
+      },
+      {
+        "round": 72,
+        "avg_client_loss": 0.00013786652041600076
+      },
+      {
+        "round": 73,
+        "avg_client_loss": 0.00013572951350921737
+      },
+      {
+        "round": 74,
+        "avg_client_loss": 0.00013366009597997358
+      },
+      {
+        "round": 75,
+        "avg_client_loss": 0.00013165535481460982
+      },
+      {
+        "round": 76,
+        "avg_client_loss": 0.00012971253962913498
+      },
+      {
+        "round": 77,
+        "avg_client_loss": 0.00012782905186305065
+      },
+      {
+        "round": 78,
+        "avg_client_loss": 0.0001260024347885065
+      },
+      {
+        "round": 79,
+        "avg_client_loss": 0.00012423036426674588
+      },
+      {
+        "round": 80,
+        "avg_client_loss": 0.00012251064018997193
+      },
+      {
+        "round": 81,
+        "avg_client_loss": 0.00012084117855232031
+      },
+      {
+        "round": 82,
+        "avg_client_loss": 0.00011922000409870258
+      },
+      {
+        "round": 83,
+        "avg_client_loss": 0.00011764524350479217
+      },
+      {
+        "round": 84,
+        "avg_client_loss": 0.00011611511904557676
+      },
+      {
+        "round": 85,
+        "avg_client_loss": 0.0001146279427136047
+      },
+      {
+        "round": 86,
+        "avg_client_loss": 0.00011318211075143411
+      },
+      {
+        "round": 87,
+        "avg_client_loss": 0.00011177609856585975
+      },
+      {
+        "round": 88,
+        "avg_client_loss": 0.00011040845599425081
+      },
+      {
+        "round": 89,
+        "avg_client_loss": 0.00010907780289586546
+      },
+      {
+        "round": 90,
+        "avg_client_loss": 0.00010778282504328515
+      },
+      {
+        "round": 91,
+        "avg_client_loss": 0.00010652227029119723
+      },
+      {
+        "round": 92,
+        "avg_client_loss": 0.000105294945001638
+      },
+      {
+        "round": 93,
+        "avg_client_loss": 0.000104099710706538
+      },
+      {
+        "round": 94,
+        "avg_client_loss": 0.00010293548098997086
+      },
+      {
+        "round": 95,
+        "avg_client_loss": 0.00010180121857394122
+      },
+      {
+        "round": 96,
+        "avg_client_loss": 0.0001006959325928494
+      },
+      {
+        "round": 97,
+        "avg_client_loss": 9.961867604296161e-05
+      },
+      {
+        "round": 98,
+        "avg_client_loss": 9.856854339429215e-05
+      },
+      {
+        "round": 99,
+        "avg_client_loss": 9.754466835331543e-05
+      },
+      {
+        "round": 100,
+        "avg_client_loss": 9.654622176581618e-05
+      },
+      {
+        "round": 101,
+        "avg_client_loss": 9.557240965002057e-05
+      },
+      {
+        "round": 102,
+        "avg_client_loss": 9.462247135092752e-05
+      },
+      {
+        "round": 103,
+        "avg_client_loss": 9.369567780743174e-05
+      },
+      {
+        "round": 104,
+        "avg_client_loss": 9.279132992449446e-05
+      },
+      {
+        "round": 105,
+        "avg_client_loss": 9.190875704318091e-05
+      },
+      {
+        "round": 106,
+        "avg_client_loss": 9.104731550194676e-05
+      },
+      {
+        "round": 107,
+        "avg_client_loss": 9.02063872830259e-05
+      },
+      {
+        "round": 108,
+        "avg_client_loss": 8.938537873824972e-05
+      },
+      {
+        "round": 109,
+        "avg_client_loss": 8.858371938902115e-05
+      },
+      {
+        "round": 110,
+        "avg_client_loss": 8.780086079557906e-05
+      },
+      {
+        "round": 111,
+        "avg_client_loss": 8.703627549101678e-05
+      },
+      {
+        "round": 112,
+        "avg_client_loss": 8.628945597586639e-05
+      },
+      {
+        "round": 113,
+        "avg_client_loss": 8.555991376934173e-05
+      },
+      {
+        "round": 114,
+        "avg_client_loss": 8.484717851362718e-05
+      },
+      {
+        "round": 115,
+        "avg_client_loss": 8.415079712784554e-05
+      },
+      {
+        "round": 116,
+        "avg_client_loss": 8.34703330085742e-05
+      },
+      {
+        "round": 117,
+        "avg_client_loss": 8.280536527400316e-05
+      },
+      {
+        "round": 118,
+        "avg_client_loss": 8.215548804902268e-05
+      },
+      {
+        "round": 119,
+        "avg_client_loss": 8.152030978872353e-05
+      },
+      {
+        "round": 120,
+        "avg_client_loss": 8.089945263795126e-05
+      },
+      {
+        "round": 121,
+        "avg_client_loss": 8.029255182473522e-05
+      },
+      {
+        "round": 122,
+        "avg_client_loss": 7.969925508554132e-05
+      },
+      {
+        "round": 123,
+        "avg_client_loss": 7.911922212044357e-05
+      },
+      {
+        "round": 124,
+        "avg_client_loss": 7.855212407644309e-05
+      },
+      {
+        "round": 125,
+        "avg_client_loss": 7.79976430572625e-05
+      },
+      {
+        "round": 126,
+        "avg_client_loss": 7.745547165807506e-05
+      },
+      {
+        "round": 127,
+        "avg_client_loss": 7.692531252370601e-05
+      },
+      {
+        "round": 128,
+        "avg_client_loss": 7.640687792896209e-05
+      },
+      {
+        "round": 129,
+        "avg_client_loss": 7.589988937980973e-05
+      },
+      {
+        "round": 130,
+        "avg_client_loss": 7.540407723422109e-05
+      },
+      {
+        "round": 131,
+        "avg_client_loss": 7.491918034156962e-05
+      },
+      {
+        "round": 132,
+        "avg_client_loss": 7.444494569954265e-05
+      },
+      {
+        "round": 133,
+        "avg_client_loss": 7.398112812758117e-05
+      },
+      {
+        "round": 134,
+        "avg_client_loss": 7.352748995594409e-05
+      },
+      {
+        "round": 135,
+        "avg_client_loss": 7.308380072953195e-05
+      },
+      {
+        "round": 136,
+        "avg_client_loss": 7.264983692566162e-05
+      },
+      {
+        "round": 137,
+        "avg_client_loss": 7.222538168504297e-05
+      },
+      {
+        "round": 138,
+        "avg_client_loss": 7.18102245552421e-05
+      },
+      {
+        "round": 139,
+        "avg_client_loss": 7.140416124596199e-05
+      },
+      {
+        "round": 140,
+        "avg_client_loss": 7.100699339551785e-05
+      },
+      {
+        "round": 141,
+        "avg_client_loss": 7.061852834791535e-05
+      },
+      {
+        "round": 142,
+        "avg_client_loss": 7.023857893997383e-05
+      },
+      {
+        "round": 143,
+        "avg_client_loss": 6.986696329797628e-05
+      },
+      {
+        "round": 144,
+        "avg_client_loss": 6.950350464335121e-05
+      },
+      {
+        "round": 145,
+        "avg_client_loss": 6.914803110692835e-05
+      },
+      {
+        "round": 146,
+        "avg_client_loss": 6.880037555132142e-05
+      },
+      {
+        "round": 147,
+        "avg_client_loss": 6.84603754010391e-05
+      },
+      {
+        "round": 148,
+        "avg_client_loss": 6.812787247992955e-05
+      },
+      {
+        "round": 149,
+        "avg_client_loss": 6.780271285559098e-05
+      },
+      {
+        "round": 150,
+        "avg_client_loss": 6.748474669040892e-05
+      },
+      {
+        "round": 151,
+        "avg_client_loss": 6.717382809888976e-05
+      },
+      {
+        "round": 152,
+        "avg_client_loss": 6.686981501098383e-05
+      },
+      {
+        "round": 153,
+        "avg_client_loss": 6.657256904110938e-05
+      },
+      {
+        "round": 154,
+        "avg_client_loss": 6.628195536259884e-05
+      },
+      {
+        "round": 155,
+        "avg_client_loss": 6.599784258731161e-05
+      },
+      {
+        "round": 156,
+        "avg_client_loss": 6.572010265016578e-05
+      },
+      {
+        "round": 157,
+        "avg_client_loss": 6.54486106983552e-05
+      },
+      {
+        "round": 158,
+        "avg_client_loss": 6.518324498503489e-05
+      },
+      {
+        "round": 159,
+        "avg_client_loss": 6.492388676726459e-05
+      },
+      {
+        "round": 160,
+        "avg_client_loss": 6.467042020801288e-05
+      },
+      {
+        "round": 161,
+        "avg_client_loss": 6.442273228203648e-05
+      },
+      {
+        "round": 162,
+        "avg_client_loss": 6.418071268545728e-05
+      },
+      {
+        "round": 163,
+        "avg_client_loss": 6.394425374886827e-05
+      },
+      {
+        "round": 164,
+        "avg_client_loss": 6.371325035380979e-05
+      },
+      {
+        "round": 165,
+        "avg_client_loss": 6.348759985246491e-05
+      },
+      {
+        "round": 166,
+        "avg_client_loss": 6.326720199043251e-05
+      },
+      {
+        "round": 167,
+        "avg_client_loss": 6.305195883243725e-05
+      },
+      {
+        "round": 168,
+        "avg_client_loss": 6.284177469085227e-05
+      },
+      {
+        "round": 169,
+        "avg_client_loss": 6.263655605690896e-05
+      },
+      {
+        "round": 170,
+        "avg_client_loss": 6.243621153447838e-05
+      },
+      {
+        "round": 171,
+        "avg_client_loss": 6.224065177631138e-05
+      },
+      {
+        "round": 172,
+        "avg_client_loss": 6.204978942263605e-05
+      },
+      {
+        "round": 173,
+        "avg_client_loss": 6.186353904200744e-05
+      },
+      {
+        "round": 174,
+        "avg_client_loss": 6.16818170743162e-05
+      },
+      {
+        "round": 175,
+        "avg_client_loss": 6.150454177586774e-05
+      },
+      {
+        "round": 176,
+        "avg_client_loss": 6.13316331664396e-05
+      },
+      {
+        "round": 177,
+        "avg_client_loss": 6.11630129782412e-05
+      },
+      {
+        "round": 178,
+        "avg_client_loss": 6.099860460669261e-05
+      },
+      {
+        "round": 179,
+        "avg_client_loss": 6.083833306294892e-05
+      },
+      {
+        "round": 180,
+        "avg_client_loss": 6.068212492810058e-05
+      },
+      {
+        "round": 181,
+        "avg_client_loss": 6.05299083089794e-05
+      },
+      {
+        "round": 182,
+        "avg_client_loss": 6.0381612795507504e-05
+      },
+      {
+        "round": 183,
+        "avg_client_loss": 6.023716941952347e-05
+      },
+      {
+        "round": 184,
+        "avg_client_loss": 6.009651061503372e-05
+      },
+      {
+        "round": 185,
+        "avg_client_loss": 5.9959570179822634e-05
+      },
+      {
+        "round": 186,
+        "avg_client_loss": 5.982628323838011e-05
+      },
+      {
+        "round": 187,
+        "avg_client_loss": 5.969658620608137e-05
+      },
+      {
+        "round": 188,
+        "avg_client_loss": 5.957041675458238e-05
+      },
+      {
+        "round": 189,
+        "avg_client_loss": 5.944771377837436e-05
+      },
+      {
+        "round": 190,
+        "avg_client_loss": 5.9328417362460305e-05
+      },
+      {
+        "round": 191,
+        "avg_client_loss": 5.921246875110243e-05
+      },
+      {
+        "round": 192,
+        "avg_client_loss": 5.909981031760638e-05
+      },
+      {
+        "round": 193,
+        "avg_client_loss": 5.8990385535101995e-05
+      },
+      {
+        "round": 194,
+        "avg_client_loss": 5.888413894827583e-05
+      },
+      {
+        "round": 195,
+        "avg_client_loss": 5.878101614603168e-05
+      },
+      {
+        "round": 196,
+        "avg_client_loss": 5.8680963735031246e-05
+      },
+      {
+        "round": 197,
+        "avg_client_loss": 5.858392931409407e-05
+      },
+      {
+        "round": 198,
+        "avg_client_loss": 5.8489861449417126e-05
+      },
+      {
+        "round": 199,
+        "avg_client_loss": 5.839870965058499e-05
+      },
+      {
+        "round": 200,
+        "avg_client_loss": 5.831042434734546e-05
+      }
+    ]
+  },
+  "digital_twins": {
+    "real_cell": {
+      "n_train_cycles": 115,
+      "n_test_cycles": 50,
+      "global_model_test": {
+        "mae": 0.0121,
+        "rmse": 0.0146,
+        "r2": 0.7949
+      },
+      "personalized_twin_test": {
+        "mae": 0.012,
+        "rmse": 0.0146,
+        "r2": 0.7952
+      }
+    }
+  },
+  "explainability": {
+    "surrogate_fidelity_r2": 0.9996928527502483,
+    "top_global_features": {
+      "early_discharge_v_drop": 0.01702,
+      "equiv_full_cycles": 0.0166,
+      "cum_ah_throughput": 0.01586,
+      "early_discharge_v_mean": 0.01444,
+      "cc_duration_s": 0.01234
+    },
+    "sample_explanations": [
+      "[real_cell / cycle 16] predicted SoH 0.982 (true 0.995, average prediction 0.783): equiv_full_cycles=7.22 raises SoH by 0.034 (17% of the shift); cum_ah_throughput=28.8 raises SoH by 0.032 (16% of the shift); early_discharge_v_drop=0.137 raises SoH by 0.031 (15% of the shift).",
+      "[real_cell / cycle 144] predicted SoH 0.869 (true 0.868, average prediction 0.783): early_discharge_v_mean=3.87 raises SoH by 0.017 (19% of the shift); early_discharge_v_drop=0.171 raises SoH by 0.014 (16% of the shift); cc_duration_s=3.22e+03 raises SoH by 0.012 (14% of the shift).",
+      "[real_cell / cycle 170] predicted SoH 0.864 (true 0.865, average prediction 0.783): early_discharge_v_mean=3.87 raises SoH by 0.016 (20% of the shift); early_discharge_v_drop=0.17 raises SoH by 0.014 (17% of the shift); cc_duration_s=3.2e+03 raises SoH by 0.011 (13% of the shift).",
+      "[real_cell / cycle 294] predicted SoH 0.735 (true 0.739, average prediction 0.783): early_discharge_v_drop=0.214 lowers SoH by 0.012 (25% of the shift); equiv_full_cycles=75.2 lowers SoH by 0.011 (22% of the shift); cum_ah_throughput=299 lowers SoH by 0.010 (20% of the shift).",
+      "[real_cell / cycle 375] predicted SoH 0.722 (true 0.721, average prediction 0.783): early_discharge_v_drop=0.224 lowers SoH by 0.014 (22% of the shift); equiv_full_cycles=90.4 lowers SoH by 0.012 (19% of the shift); cum_ah_throughput=360 lowers SoH by 0.011 (18% of the shift).",
+      "[real_cell / cycle 505] predicted SoH 0.666 (true 0.657, average prediction 0.783): early_discharge_v_mean=3.76 lowers SoH by 0.018 (15% of the shift); cum_ah_throughput=453 lowers SoH by 0.017 (14% of the shift); equiv_full_cycles=114 lowers SoH by 0.017 (14% of the shift)."
+    ]
+  },
+  "edge_deployment": {
+    "real_cell": {
+      "n_params": 186,
+      "avg_inference_latency_ms": 0.0104,
+      "mae_fp32": 0.012040889990111265,
+      "mae_quantized_int8": 0.01031007757581294,
+      "accuracy_delta": -0.0017308124142983248,
+      "orig_size_bytes": 744,
+      "quantized_size_bytes": 186,
+      "size_reduction_pct": 75.0
+    }
+  }
+}
