@@ -90,6 +90,15 @@ Example request:
 
 The supplied dataset has no direct measured SOH label. The implementation therefore derives a proxy target from sparse charging-cycle capacity estimates, mileage progression, cell-voltage imbalance, and thermal/current stress. Results are intended for academic demonstration and are not a safety-certified battery-management system.
 
+## Research Pipeline
+
+`research/` holds the offline evaluation pipeline. It trains on real
+cycling data (one cell plus four NASA PCoE cells) with true capacity-based SOH
+labels and a held-out chronological split. It compares against ridge and
+usage-only baselines, explains predictions with SHAP, and exports an int8
+model as verified C code for a BMS microcontroller. See
+[research/README.md](research/README.md) for results and how to run it.
+
 ## License and Data
 
 No license has been selected for this academic project. Add a license before publishing if required by your institution. Check the dataset's own terms before redistributing the archive; the archive is excluded from this repository by default.
